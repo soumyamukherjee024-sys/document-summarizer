@@ -1,10 +1,8 @@
 streamlit
-PyMuPDF
-pytesseract
-Pillow
+PyPDF2
 spacy==3.7.2
-gensim==4.3.2
 wordcloud
+matplotlib
 scikit-learn
 nltk
-fitz
+
