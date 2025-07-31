@@ -7,3 +7,4 @@ gensim==4.3.2
 wordcloud
 scikit-learn
 nltk
+fitz
