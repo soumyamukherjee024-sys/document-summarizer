@@ -1,0 +1,9 @@
+streamlit
+PyMuPDF
+pytesseract
+Pillow
+spacy==3.7.2
+gensim==4.3.2
+wordcloud
+scikit-learn
+nltk
