@@ -9,11 +9,17 @@ import nltk
 # Ensure necessary NLTK data is available
 try:
     nltk.data.find('tokenizers/punkt')
-    nltk.data.find('corpus/stopwords')
-except nltk.downloader.DownloadError:
+    nltk.data.find('corpora/stopwords')
+    # Check for the specific punkt_tab resource as well
+    nltk.data.find('tokenizers/punkt_tab')
+    print("All necessary NLTK data is already available.")
+except LookupError:
     print("Downloading necessary NLTK data...")
     nltk.download('punkt', quiet=True)
     nltk.download('stopwords', quiet=True)
+    # This explicit download addresses the 'punkt_tab' error
+    nltk.download('punkt_tab', quiet=True)
+    print("NLTK data download complete.")
 
 from nltk.corpus import stopwords
 from nltk.tokenize import sent_tokenize
